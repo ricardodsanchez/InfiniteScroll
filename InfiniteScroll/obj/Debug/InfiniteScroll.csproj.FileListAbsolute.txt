@@ -1,0 +1,7 @@
+C:\Users\Ricardo Sanchez\Documents\Dev\InfiniteScroll\InfiniteScroll\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ricardo Sanchez\Documents\Dev\InfiniteScroll\InfiniteScroll\bin\InfiniteScroll.dll
+C:\Users\Ricardo Sanchez\Documents\Dev\InfiniteScroll\InfiniteScroll\bin\InfiniteScroll.pdb
+C:\Users\Ricardo Sanchez\Documents\Dev\InfiniteScroll\InfiniteScroll\bin\EntityFramework.dll
+C:\Users\Ricardo Sanchez\Documents\Dev\InfiniteScroll\InfiniteScroll\bin\EntityFramework.xml
+C:\Users\Ricardo Sanchez\Documents\Dev\InfiniteScroll\InfiniteScroll\obj\Debug\InfiniteScroll.dll
+C:\Users\Ricardo Sanchez\Documents\Dev\InfiniteScroll\InfiniteScroll\obj\Debug\InfiniteScroll.pdb

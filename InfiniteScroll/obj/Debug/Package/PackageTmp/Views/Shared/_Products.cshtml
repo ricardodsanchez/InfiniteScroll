@@ -1,0 +1,14 @@
+﻿@model IEnumerable<InfiniteScroll.Product>
+   
+@using System.Drawing
+
+@foreach (var item in Model)
+{
+    //var image = Image.FromStream(new MemoryStream(@item.ProductProductPhotoes.SingleOrDefault().ProductPhoto.ThumbNailPhoto));
+    
+    <div>
+        <img src="@Url.Action("Show", "Image", new { id = item.ProductProductPhotoes.FirstOrDefault().ProductPhotoID } )" alt="Product Image" />
+        <b>Number:</b> @item.ProductNumber <b>Name:</b> @item.Name <b>Color:</b> @item.Color<br />
+        <b>Price:</b> $@item.ListPrice.ToString("##.00") <br />
+    </div>
+}

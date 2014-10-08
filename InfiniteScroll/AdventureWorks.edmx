@@ -1,0 +1,1152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AdventureWorksModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="AdventureWorksModelStoreContainer">
+          <EntitySet Name="Product" EntityType="AdventureWorksModel.Store.Product" store:Type="Tables" Schema="Production" />
+          <EntitySet Name="ProductCategory" EntityType="AdventureWorksModel.Store.ProductCategory" store:Type="Tables" Schema="Production" />
+          <EntitySet Name="ProductCostHistory" EntityType="AdventureWorksModel.Store.ProductCostHistory" store:Type="Tables" Schema="Production" />
+          <EntitySet Name="ProductDescription" EntityType="AdventureWorksModel.Store.ProductDescription" store:Type="Tables" Schema="Production" />
+          <EntitySet Name="ProductDocument" EntityType="AdventureWorksModel.Store.ProductDocument" store:Type="Tables" Schema="Production" />
+          <EntitySet Name="ProductInventory" EntityType="AdventureWorksModel.Store.ProductInventory" store:Type="Tables" Schema="Production" />
+          <EntitySet Name="ProductListPriceHistory" EntityType="AdventureWorksModel.Store.ProductListPriceHistory" store:Type="Tables" Schema="Production" />
+          <EntitySet Name="ProductModel" EntityType="AdventureWorksModel.Store.ProductModel" store:Type="Tables" Schema="Production" />
+          <EntitySet Name="ProductModelIllustration" EntityType="AdventureWorksModel.Store.ProductModelIllustration" store:Type="Tables" Schema="Production" />
+          <EntitySet Name="ProductModelProductDescriptionCulture" EntityType="AdventureWorksModel.Store.ProductModelProductDescriptionCulture" store:Type="Tables" Schema="Production" />
+          <EntitySet Name="ProductPhoto" EntityType="AdventureWorksModel.Store.ProductPhoto" store:Type="Tables" Schema="Production" />
+          <EntitySet Name="ProductProductPhoto" EntityType="AdventureWorksModel.Store.ProductProductPhoto" store:Type="Tables" Schema="Production" />
+          <EntitySet Name="ProductReview" EntityType="AdventureWorksModel.Store.ProductReview" store:Type="Tables" Schema="Production" />
+          <EntitySet Name="ProductSubcategory" EntityType="AdventureWorksModel.Store.ProductSubcategory" store:Type="Tables" Schema="Production" />
+          <EntitySet Name="ProductVendor" EntityType="AdventureWorksModel.Store.ProductVendor" store:Type="Tables" Schema="Purchasing" />
+          <AssociationSet Name="FK_Product_ProductModel_ProductModelID" Association="AdventureWorksModel.Store.FK_Product_ProductModel_ProductModelID">
+            <End Role="ProductModel" EntitySet="ProductModel" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_ProductSubcategory_ProductSubcategoryID" Association="AdventureWorksModel.Store.FK_Product_ProductSubcategory_ProductSubcategoryID">
+            <End Role="ProductSubcategory" EntitySet="ProductSubcategory" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductCostHistory_Product_ProductID" Association="AdventureWorksModel.Store.FK_ProductCostHistory_Product_ProductID">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductCostHistory" EntitySet="ProductCostHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductDocument_Product_ProductID" Association="AdventureWorksModel.Store.FK_ProductDocument_Product_ProductID">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductDocument" EntitySet="ProductDocument" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductInventory_Product_ProductID" Association="AdventureWorksModel.Store.FK_ProductInventory_Product_ProductID">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductInventory" EntitySet="ProductInventory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductListPriceHistory_Product_ProductID" Association="AdventureWorksModel.Store.FK_ProductListPriceHistory_Product_ProductID">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductListPriceHistory" EntitySet="ProductListPriceHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductModelIllustration_ProductModel_ProductModelID" Association="AdventureWorksModel.Store.FK_ProductModelIllustration_ProductModel_ProductModelID">
+            <End Role="ProductModel" EntitySet="ProductModel" />
+            <End Role="ProductModelIllustration" EntitySet="ProductModelIllustration" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductModelProductDescriptionCulture_ProductDescription_ProductDescriptionID" Association="AdventureWorksModel.Store.FK_ProductModelProductDescriptionCulture_ProductDescription_ProductDescriptionID">
+            <End Role="ProductDescription" EntitySet="ProductDescription" />
+            <End Role="ProductModelProductDescriptionCulture" EntitySet="ProductModelProductDescriptionCulture" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductModelProductDescriptionCulture_ProductModel_ProductModelID" Association="AdventureWorksModel.Store.FK_ProductModelProductDescriptionCulture_ProductModel_ProductModelID">
+            <End Role="ProductModel" EntitySet="ProductModel" />
+            <End Role="ProductModelProductDescriptionCulture" EntitySet="ProductModelProductDescriptionCulture" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductProductPhoto_Product_ProductID" Association="AdventureWorksModel.Store.FK_ProductProductPhoto_Product_ProductID">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductProductPhoto" EntitySet="ProductProductPhoto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductProductPhoto_ProductPhoto_ProductPhotoID" Association="AdventureWorksModel.Store.FK_ProductProductPhoto_ProductPhoto_ProductPhotoID">
+            <End Role="ProductPhoto" EntitySet="ProductPhoto" />
+            <End Role="ProductProductPhoto" EntitySet="ProductProductPhoto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductReview_Product_ProductID" Association="AdventureWorksModel.Store.FK_ProductReview_Product_ProductID">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductReview" EntitySet="ProductReview" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSubcategory_ProductCategory_ProductCategoryID" Association="AdventureWorksModel.Store.FK_ProductSubcategory_ProductCategory_ProductCategoryID">
+            <End Role="ProductCategory" EntitySet="ProductCategory" />
+            <End Role="ProductSubcategory" EntitySet="ProductSubcategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductVendor_Product_ProductID" Association="AdventureWorksModel.Store.FK_ProductVendor_Product_ProductID">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductVendor" EntitySet="ProductVendor" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProductNumber" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="MakeFlag" Type="bit" Nullable="false" />
+          <Property Name="FinishedGoodsFlag" Type="bit" Nullable="false" />
+          <Property Name="Color" Type="nvarchar" MaxLength="15" />
+          <Property Name="SafetyStockLevel" Type="smallint" Nullable="false" />
+          <Property Name="ReorderPoint" Type="smallint" Nullable="false" />
+          <Property Name="StandardCost" Type="money" Nullable="false" />
+          <Property Name="ListPrice" Type="money" Nullable="false" />
+          <Property Name="Size" Type="nvarchar" MaxLength="5" />
+          <Property Name="SizeUnitMeasureCode" Type="nchar" MaxLength="3" />
+          <Property Name="WeightUnitMeasureCode" Type="nchar" MaxLength="3" />
+          <Property Name="Weight" Type="decimal" Precision="8" Scale="2" />
+          <Property Name="DaysToManufacture" Type="int" Nullable="false" />
+          <Property Name="ProductLine" Type="nchar" MaxLength="2" />
+          <Property Name="Class" Type="nchar" MaxLength="2" />
+          <Property Name="Style" Type="nchar" MaxLength="2" />
+          <Property Name="ProductSubcategoryID" Type="int" />
+          <Property Name="ProductModelID" Type="int" />
+          <Property Name="SellStartDate" Type="datetime" Nullable="false" />
+          <Property Name="SellEndDate" Type="datetime" />
+          <Property Name="DiscontinuedDate" Type="datetime" />
+          <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductCategory">
+          <Key>
+            <PropertyRef Name="ProductCategoryID" />
+          </Key>
+          <Property Name="ProductCategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductCostHistory">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="StartDate" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="StandardCost" Type="money" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductDescription">
+          <Key>
+            <PropertyRef Name="ProductDescriptionID" />
+          </Key>
+          <Property Name="ProductDescriptionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="400" />
+          <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductDocument">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="DocumentID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="DocumentID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductInventory">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="LocationID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="LocationID" Type="smallint" Nullable="false" />
+          <Property Name="Shelf" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="Bin" Type="tinyint" Nullable="false" />
+          <Property Name="Quantity" Type="smallint" Nullable="false" />
+          <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductListPriceHistory">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="StartDate" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="ListPrice" Type="money" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductModel">
+          <Key>
+            <PropertyRef Name="ProductModelID" />
+          </Key>
+          <Property Name="ProductModelID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CatalogDescription" Type="xml" />
+          <Property Name="Instructions" Type="xml" />
+          <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductModelIllustration">
+          <Key>
+            <PropertyRef Name="ProductModelID" />
+            <PropertyRef Name="IllustrationID" />
+          </Key>
+          <Property Name="ProductModelID" Type="int" Nullable="false" />
+          <Property Name="IllustrationID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductModelProductDescriptionCulture">
+          <Key>
+            <PropertyRef Name="ProductModelID" />
+            <PropertyRef Name="ProductDescriptionID" />
+            <PropertyRef Name="CultureID" />
+          </Key>
+          <Property Name="ProductModelID" Type="int" Nullable="false" />
+          <Property Name="ProductDescriptionID" Type="int" Nullable="false" />
+          <Property Name="CultureID" Type="nchar" Nullable="false" MaxLength="6" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductPhoto">
+          <Key>
+            <PropertyRef Name="ProductPhotoID" />
+          </Key>
+          <Property Name="ProductPhotoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ThumbNailPhoto" Type="varbinary(max)" />
+          <Property Name="ThumbnailPhotoFileName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LargePhoto" Type="varbinary(max)" />
+          <Property Name="LargePhotoFileName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductProductPhoto">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="ProductPhotoID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="ProductPhotoID" Type="int" Nullable="false" />
+          <Property Name="Primary" Type="bit" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductReview">
+          <Key>
+            <PropertyRef Name="ProductReviewID" />
+          </Key>
+          <Property Name="ProductReviewID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="ReviewerName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ReviewDate" Type="datetime" Nullable="false" />
+          <Property Name="EmailAddress" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Rating" Type="int" Nullable="false" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="3850" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductSubcategory">
+          <Key>
+            <PropertyRef Name="ProductSubcategoryID" />
+          </Key>
+          <Property Name="ProductSubcategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductCategoryID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductVendor">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="VendorID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="VendorID" Type="int" Nullable="false" />
+          <Property Name="AverageLeadTime" Type="int" Nullable="false" />
+          <Property Name="StandardPrice" Type="money" Nullable="false" />
+          <Property Name="LastReceiptCost" Type="money" />
+          <Property Name="LastReceiptDate" Type="datetime" />
+          <Property Name="MinOrderQty" Type="int" Nullable="false" />
+          <Property Name="MaxOrderQty" Type="int" Nullable="false" />
+          <Property Name="OnOrderQty" Type="int" />
+          <Property Name="UnitMeasureCode" Type="nchar" Nullable="false" MaxLength="3" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Product_ProductModel_ProductModelID">
+          <End Role="ProductModel" Type="AdventureWorksModel.Store.ProductModel" Multiplicity="0..1" />
+          <End Role="Product" Type="AdventureWorksModel.Store.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductModel">
+              <PropertyRef Name="ProductModelID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProductModelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_ProductSubcategory_ProductSubcategoryID">
+          <End Role="ProductSubcategory" Type="AdventureWorksModel.Store.ProductSubcategory" Multiplicity="0..1" />
+          <End Role="Product" Type="AdventureWorksModel.Store.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductSubcategory">
+              <PropertyRef Name="ProductSubcategoryID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProductSubcategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductCostHistory_Product_ProductID">
+          <End Role="Product" Type="AdventureWorksModel.Store.Product" Multiplicity="1" />
+          <End Role="ProductCostHistory" Type="AdventureWorksModel.Store.ProductCostHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductCostHistory">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductDocument_Product_ProductID">
+          <End Role="Product" Type="AdventureWorksModel.Store.Product" Multiplicity="1" />
+          <End Role="ProductDocument" Type="AdventureWorksModel.Store.ProductDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductDocument">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductInventory_Product_ProductID">
+          <End Role="Product" Type="AdventureWorksModel.Store.Product" Multiplicity="1" />
+          <End Role="ProductInventory" Type="AdventureWorksModel.Store.ProductInventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductInventory">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductListPriceHistory_Product_ProductID">
+          <End Role="Product" Type="AdventureWorksModel.Store.Product" Multiplicity="1" />
+          <End Role="ProductListPriceHistory" Type="AdventureWorksModel.Store.ProductListPriceHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductListPriceHistory">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductModelIllustration_ProductModel_ProductModelID">
+          <End Role="ProductModel" Type="AdventureWorksModel.Store.ProductModel" Multiplicity="1" />
+          <End Role="ProductModelIllustration" Type="AdventureWorksModel.Store.ProductModelIllustration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductModel">
+              <PropertyRef Name="ProductModelID" />
+            </Principal>
+            <Dependent Role="ProductModelIllustration">
+              <PropertyRef Name="ProductModelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductModelProductDescriptionCulture_ProductDescription_ProductDescriptionID">
+          <End Role="ProductDescription" Type="AdventureWorksModel.Store.ProductDescription" Multiplicity="1" />
+          <End Role="ProductModelProductDescriptionCulture" Type="AdventureWorksModel.Store.ProductModelProductDescriptionCulture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductDescription">
+              <PropertyRef Name="ProductDescriptionID" />
+            </Principal>
+            <Dependent Role="ProductModelProductDescriptionCulture">
+              <PropertyRef Name="ProductDescriptionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductModelProductDescriptionCulture_ProductModel_ProductModelID">
+          <End Role="ProductModel" Type="AdventureWorksModel.Store.ProductModel" Multiplicity="1" />
+          <End Role="ProductModelProductDescriptionCulture" Type="AdventureWorksModel.Store.ProductModelProductDescriptionCulture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductModel">
+              <PropertyRef Name="ProductModelID" />
+            </Principal>
+            <Dependent Role="ProductModelProductDescriptionCulture">
+              <PropertyRef Name="ProductModelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductProductPhoto_Product_ProductID">
+          <End Role="Product" Type="AdventureWorksModel.Store.Product" Multiplicity="1" />
+          <End Role="ProductProductPhoto" Type="AdventureWorksModel.Store.ProductProductPhoto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductProductPhoto">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductProductPhoto_ProductPhoto_ProductPhotoID">
+          <End Role="ProductPhoto" Type="AdventureWorksModel.Store.ProductPhoto" Multiplicity="1" />
+          <End Role="ProductProductPhoto" Type="AdventureWorksModel.Store.ProductProductPhoto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductPhoto">
+              <PropertyRef Name="ProductPhotoID" />
+            </Principal>
+            <Dependent Role="ProductProductPhoto">
+              <PropertyRef Name="ProductPhotoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductReview_Product_ProductID">
+          <End Role="Product" Type="AdventureWorksModel.Store.Product" Multiplicity="1" />
+          <End Role="ProductReview" Type="AdventureWorksModel.Store.ProductReview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductReview">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSubcategory_ProductCategory_ProductCategoryID">
+          <End Role="ProductCategory" Type="AdventureWorksModel.Store.ProductCategory" Multiplicity="1" />
+          <End Role="ProductSubcategory" Type="AdventureWorksModel.Store.ProductSubcategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductCategory">
+              <PropertyRef Name="ProductCategoryID" />
+            </Principal>
+            <Dependent Role="ProductSubcategory">
+              <PropertyRef Name="ProductCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductVendor_Product_ProductID">
+          <End Role="Product" Type="AdventureWorksModel.Store.Product" Multiplicity="1" />
+          <End Role="ProductVendor" Type="AdventureWorksModel.Store.ProductVendor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductVendor">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AdventureWorksModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="AdventureWorksEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Products" EntityType="AdventureWorksModel.Product" />
+          <EntitySet Name="ProductCategories" EntityType="AdventureWorksModel.ProductCategory" />
+          <EntitySet Name="ProductCostHistories" EntityType="AdventureWorksModel.ProductCostHistory" />
+          <EntitySet Name="ProductDescriptions" EntityType="AdventureWorksModel.ProductDescription" />
+          <EntitySet Name="ProductDocuments" EntityType="AdventureWorksModel.ProductDocument" />
+          <EntitySet Name="ProductInventories" EntityType="AdventureWorksModel.ProductInventory" />
+          <EntitySet Name="ProductListPriceHistories" EntityType="AdventureWorksModel.ProductListPriceHistory" />
+          <EntitySet Name="ProductModels" EntityType="AdventureWorksModel.ProductModel" />
+          <EntitySet Name="ProductModelIllustrations" EntityType="AdventureWorksModel.ProductModelIllustration" />
+          <EntitySet Name="ProductModelProductDescriptionCultures" EntityType="AdventureWorksModel.ProductModelProductDescriptionCulture" />
+          <EntitySet Name="ProductPhotoes" EntityType="AdventureWorksModel.ProductPhoto" />
+          <EntitySet Name="ProductProductPhotoes" EntityType="AdventureWorksModel.ProductProductPhoto" />
+          <EntitySet Name="ProductReviews" EntityType="AdventureWorksModel.ProductReview" />
+          <EntitySet Name="ProductSubcategories" EntityType="AdventureWorksModel.ProductSubcategory" />
+          <EntitySet Name="ProductVendors" EntityType="AdventureWorksModel.ProductVendor" />
+          <AssociationSet Name="FK_Product_ProductModel_ProductModelID" Association="AdventureWorksModel.FK_Product_ProductModel_ProductModelID">
+            <End Role="ProductModel" EntitySet="ProductModels" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_ProductSubcategory_ProductSubcategoryID" Association="AdventureWorksModel.FK_Product_ProductSubcategory_ProductSubcategoryID">
+            <End Role="ProductSubcategory" EntitySet="ProductSubcategories" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductCostHistory_Product_ProductID" Association="AdventureWorksModel.FK_ProductCostHistory_Product_ProductID">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductCostHistory" EntitySet="ProductCostHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductDocument_Product_ProductID" Association="AdventureWorksModel.FK_ProductDocument_Product_ProductID">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductDocument" EntitySet="ProductDocuments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductInventory_Product_ProductID" Association="AdventureWorksModel.FK_ProductInventory_Product_ProductID">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductInventory" EntitySet="ProductInventories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductListPriceHistory_Product_ProductID" Association="AdventureWorksModel.FK_ProductListPriceHistory_Product_ProductID">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductListPriceHistory" EntitySet="ProductListPriceHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductProductPhoto_Product_ProductID" Association="AdventureWorksModel.FK_ProductProductPhoto_Product_ProductID">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductProductPhoto" EntitySet="ProductProductPhotoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductReview_Product_ProductID" Association="AdventureWorksModel.FK_ProductReview_Product_ProductID">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductReview" EntitySet="ProductReviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductVendor_Product_ProductID" Association="AdventureWorksModel.FK_ProductVendor_Product_ProductID">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductVendor" EntitySet="ProductVendors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSubcategory_ProductCategory_ProductCategoryID" Association="AdventureWorksModel.FK_ProductSubcategory_ProductCategory_ProductCategoryID">
+            <End Role="ProductCategory" EntitySet="ProductCategories" />
+            <End Role="ProductSubcategory" EntitySet="ProductSubcategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductModelProductDescriptionCulture_ProductDescription_ProductDescriptionID" Association="AdventureWorksModel.FK_ProductModelProductDescriptionCulture_ProductDescription_ProductDescriptionID">
+            <End Role="ProductDescription" EntitySet="ProductDescriptions" />
+            <End Role="ProductModelProductDescriptionCulture" EntitySet="ProductModelProductDescriptionCultures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductModelIllustration_ProductModel_ProductModelID" Association="AdventureWorksModel.FK_ProductModelIllustration_ProductModel_ProductModelID">
+            <End Role="ProductModel" EntitySet="ProductModels" />
+            <End Role="ProductModelIllustration" EntitySet="ProductModelIllustrations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductModelProductDescriptionCulture_ProductModel_ProductModelID" Association="AdventureWorksModel.FK_ProductModelProductDescriptionCulture_ProductModel_ProductModelID">
+            <End Role="ProductModel" EntitySet="ProductModels" />
+            <End Role="ProductModelProductDescriptionCulture" EntitySet="ProductModelProductDescriptionCultures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductProductPhoto_ProductPhoto_ProductPhotoID" Association="AdventureWorksModel.FK_ProductProductPhoto_ProductPhoto_ProductPhotoID">
+            <End Role="ProductPhoto" EntitySet="ProductPhotoes" />
+            <End Role="ProductProductPhoto" EntitySet="ProductProductPhotoes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProductNumber" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="MakeFlag" Type="Boolean" Nullable="false" />
+          <Property Name="FinishedGoodsFlag" Type="Boolean" Nullable="false" />
+          <Property Name="Color" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="SafetyStockLevel" Type="Int16" Nullable="false" />
+          <Property Name="ReorderPoint" Type="Int16" Nullable="false" />
+          <Property Name="StandardCost" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="ListPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Size" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="SizeUnitMeasureCode" Type="String" MaxLength="3" Unicode="true" FixedLength="true" />
+          <Property Name="WeightUnitMeasureCode" Type="String" MaxLength="3" Unicode="true" FixedLength="true" />
+          <Property Name="Weight" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="DaysToManufacture" Type="Int32" Nullable="false" />
+          <Property Name="ProductLine" Type="String" MaxLength="2" Unicode="true" FixedLength="true" />
+          <Property Name="Class" Type="String" MaxLength="2" Unicode="true" FixedLength="true" />
+          <Property Name="Style" Type="String" MaxLength="2" Unicode="true" FixedLength="true" />
+          <Property Name="ProductSubcategoryID" Type="Int32" />
+          <Property Name="ProductModelID" Type="Int32" />
+          <Property Name="SellStartDate" Type="DateTime" Nullable="false" />
+          <Property Name="SellEndDate" Type="DateTime" />
+          <Property Name="DiscontinuedDate" Type="DateTime" />
+          <Property Name="rowguid" Type="Guid" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="ProductModel" Relationship="AdventureWorksModel.FK_Product_ProductModel_ProductModelID" FromRole="Product" ToRole="ProductModel" />
+          <NavigationProperty Name="ProductSubcategory" Relationship="AdventureWorksModel.FK_Product_ProductSubcategory_ProductSubcategoryID" FromRole="Product" ToRole="ProductSubcategory" />
+          <NavigationProperty Name="ProductCostHistories" Relationship="AdventureWorksModel.FK_ProductCostHistory_Product_ProductID" FromRole="Product" ToRole="ProductCostHistory" />
+          <NavigationProperty Name="ProductDocuments" Relationship="AdventureWorksModel.FK_ProductDocument_Product_ProductID" FromRole="Product" ToRole="ProductDocument" />
+          <NavigationProperty Name="ProductInventories" Relationship="AdventureWorksModel.FK_ProductInventory_Product_ProductID" FromRole="Product" ToRole="ProductInventory" />
+          <NavigationProperty Name="ProductListPriceHistories" Relationship="AdventureWorksModel.FK_ProductListPriceHistory_Product_ProductID" FromRole="Product" ToRole="ProductListPriceHistory" />
+          <NavigationProperty Name="ProductProductPhotoes" Relationship="AdventureWorksModel.FK_ProductProductPhoto_Product_ProductID" FromRole="Product" ToRole="ProductProductPhoto" />
+          <NavigationProperty Name="ProductReviews" Relationship="AdventureWorksModel.FK_ProductReview_Product_ProductID" FromRole="Product" ToRole="ProductReview" />
+          <NavigationProperty Name="ProductVendors" Relationship="AdventureWorksModel.FK_ProductVendor_Product_ProductID" FromRole="Product" ToRole="ProductVendor" />
+        </EntityType>
+        <EntityType Name="ProductCategory">
+          <Key>
+            <PropertyRef Name="ProductCategoryID" />
+          </Key>
+          <Property Name="ProductCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="rowguid" Type="Guid" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="ProductSubcategories" Relationship="AdventureWorksModel.FK_ProductSubcategory_ProductCategory_ProductCategoryID" FromRole="ProductCategory" ToRole="ProductSubcategory" />
+        </EntityType>
+        <EntityType Name="ProductCostHistory">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="StartDate" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" />
+          <Property Name="EndDate" Type="DateTime" />
+          <Property Name="StandardCost" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="AdventureWorksModel.FK_ProductCostHistory_Product_ProductID" FromRole="ProductCostHistory" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="ProductDescription">
+          <Key>
+            <PropertyRef Name="ProductDescriptionID" />
+          </Key>
+          <Property Name="ProductDescriptionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
+          <Property Name="rowguid" Type="Guid" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="ProductModelProductDescriptionCultures" Relationship="AdventureWorksModel.FK_ProductModelProductDescriptionCulture_ProductDescription_ProductDescriptionID" FromRole="ProductDescription" ToRole="ProductModelProductDescriptionCulture" />
+        </EntityType>
+        <EntityType Name="ProductDocument">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="DocumentID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="DocumentID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="AdventureWorksModel.FK_ProductDocument_Product_ProductID" FromRole="ProductDocument" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="ProductInventory">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="LocationID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="LocationID" Type="Int16" Nullable="false" />
+          <Property Name="Shelf" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Bin" Type="Byte" Nullable="false" />
+          <Property Name="Quantity" Type="Int16" Nullable="false" />
+          <Property Name="rowguid" Type="Guid" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="AdventureWorksModel.FK_ProductInventory_Product_ProductID" FromRole="ProductInventory" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="ProductListPriceHistory">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="StartDate" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" />
+          <Property Name="EndDate" Type="DateTime" />
+          <Property Name="ListPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="AdventureWorksModel.FK_ProductListPriceHistory_Product_ProductID" FromRole="ProductListPriceHistory" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="ProductModel">
+          <Key>
+            <PropertyRef Name="ProductModelID" />
+          </Key>
+          <Property Name="ProductModelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CatalogDescription" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Instructions" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="rowguid" Type="Guid" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Products" Relationship="AdventureWorksModel.FK_Product_ProductModel_ProductModelID" FromRole="ProductModel" ToRole="Product" />
+          <NavigationProperty Name="ProductModelIllustrations" Relationship="AdventureWorksModel.FK_ProductModelIllustration_ProductModel_ProductModelID" FromRole="ProductModel" ToRole="ProductModelIllustration" />
+          <NavigationProperty Name="ProductModelProductDescriptionCultures" Relationship="AdventureWorksModel.FK_ProductModelProductDescriptionCulture_ProductModel_ProductModelID" FromRole="ProductModel" ToRole="ProductModelProductDescriptionCulture" />
+        </EntityType>
+        <EntityType Name="ProductModelIllustration">
+          <Key>
+            <PropertyRef Name="ProductModelID" />
+            <PropertyRef Name="IllustrationID" />
+          </Key>
+          <Property Name="ProductModelID" Type="Int32" Nullable="false" />
+          <Property Name="IllustrationID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="ProductModel" Relationship="AdventureWorksModel.FK_ProductModelIllustration_ProductModel_ProductModelID" FromRole="ProductModelIllustration" ToRole="ProductModel" />
+        </EntityType>
+        <EntityType Name="ProductModelProductDescriptionCulture">
+          <Key>
+            <PropertyRef Name="ProductModelID" />
+            <PropertyRef Name="ProductDescriptionID" />
+            <PropertyRef Name="CultureID" />
+          </Key>
+          <Property Name="ProductModelID" Type="Int32" Nullable="false" />
+          <Property Name="ProductDescriptionID" Type="Int32" Nullable="false" />
+          <Property Name="CultureID" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="true" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="ProductDescription" Relationship="AdventureWorksModel.FK_ProductModelProductDescriptionCulture_ProductDescription_ProductDescriptionID" FromRole="ProductModelProductDescriptionCulture" ToRole="ProductDescription" />
+          <NavigationProperty Name="ProductModel" Relationship="AdventureWorksModel.FK_ProductModelProductDescriptionCulture_ProductModel_ProductModelID" FromRole="ProductModelProductDescriptionCulture" ToRole="ProductModel" />
+        </EntityType>
+        <EntityType Name="ProductPhoto">
+          <Key>
+            <PropertyRef Name="ProductPhotoID" />
+          </Key>
+          <Property Name="ProductPhotoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ThumbNailPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ThumbnailPhotoFileName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LargePhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="LargePhotoFileName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="ProductProductPhotoes" Relationship="AdventureWorksModel.FK_ProductProductPhoto_ProductPhoto_ProductPhotoID" FromRole="ProductPhoto" ToRole="ProductProductPhoto" />
+        </EntityType>
+        <EntityType Name="ProductProductPhoto">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="ProductPhotoID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="ProductPhotoID" Type="Int32" Nullable="false" />
+          <Property Name="Primary" Type="Boolean" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="AdventureWorksModel.FK_ProductProductPhoto_Product_ProductID" FromRole="ProductProductPhoto" ToRole="Product" />
+          <NavigationProperty Name="ProductPhoto" Relationship="AdventureWorksModel.FK_ProductProductPhoto_ProductPhoto_ProductPhotoID" FromRole="ProductProductPhoto" ToRole="ProductPhoto" />
+        </EntityType>
+        <EntityType Name="ProductReview">
+          <Key>
+            <PropertyRef Name="ProductReviewID" />
+          </Key>
+          <Property Name="ProductReviewID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="ReviewerName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ReviewDate" Type="DateTime" Nullable="false" />
+          <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Rating" Type="Int32" Nullable="false" />
+          <Property Name="Comments" Type="String" MaxLength="3850" Unicode="true" FixedLength="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="AdventureWorksModel.FK_ProductReview_Product_ProductID" FromRole="ProductReview" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="ProductSubcategory">
+          <Key>
+            <PropertyRef Name="ProductSubcategoryID" />
+          </Key>
+          <Property Name="ProductSubcategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductCategoryID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="rowguid" Type="Guid" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Products" Relationship="AdventureWorksModel.FK_Product_ProductSubcategory_ProductSubcategoryID" FromRole="ProductSubcategory" ToRole="Product" />
+          <NavigationProperty Name="ProductCategory" Relationship="AdventureWorksModel.FK_ProductSubcategory_ProductCategory_ProductCategoryID" FromRole="ProductSubcategory" ToRole="ProductCategory" />
+        </EntityType>
+        <EntityType Name="ProductVendor">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="VendorID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="VendorID" Type="Int32" Nullable="false" />
+          <Property Name="AverageLeadTime" Type="Int32" Nullable="false" />
+          <Property Name="StandardPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="LastReceiptCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="LastReceiptDate" Type="DateTime" />
+          <Property Name="MinOrderQty" Type="Int32" Nullable="false" />
+          <Property Name="MaxOrderQty" Type="Int32" Nullable="false" />
+          <Property Name="OnOrderQty" Type="Int32" />
+          <Property Name="UnitMeasureCode" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="true" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="AdventureWorksModel.FK_ProductVendor_Product_ProductID" FromRole="ProductVendor" ToRole="Product" />
+        </EntityType>
+        <Association Name="FK_Product_ProductModel_ProductModelID">
+          <End Role="ProductModel" Type="AdventureWorksModel.ProductModel" Multiplicity="0..1" />
+          <End Role="Product" Type="AdventureWorksModel.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductModel">
+              <PropertyRef Name="ProductModelID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProductModelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_ProductSubcategory_ProductSubcategoryID">
+          <End Role="ProductSubcategory" Type="AdventureWorksModel.ProductSubcategory" Multiplicity="0..1" />
+          <End Role="Product" Type="AdventureWorksModel.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductSubcategory">
+              <PropertyRef Name="ProductSubcategoryID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProductSubcategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductCostHistory_Product_ProductID">
+          <End Role="Product" Type="AdventureWorksModel.Product" Multiplicity="1" />
+          <End Role="ProductCostHistory" Type="AdventureWorksModel.ProductCostHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductCostHistory">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductDocument_Product_ProductID">
+          <End Role="Product" Type="AdventureWorksModel.Product" Multiplicity="1" />
+          <End Role="ProductDocument" Type="AdventureWorksModel.ProductDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductDocument">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductInventory_Product_ProductID">
+          <End Role="Product" Type="AdventureWorksModel.Product" Multiplicity="1" />
+          <End Role="ProductInventory" Type="AdventureWorksModel.ProductInventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductInventory">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductListPriceHistory_Product_ProductID">
+          <End Role="Product" Type="AdventureWorksModel.Product" Multiplicity="1" />
+          <End Role="ProductListPriceHistory" Type="AdventureWorksModel.ProductListPriceHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductListPriceHistory">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductProductPhoto_Product_ProductID">
+          <End Role="Product" Type="AdventureWorksModel.Product" Multiplicity="1" />
+          <End Role="ProductProductPhoto" Type="AdventureWorksModel.ProductProductPhoto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductProductPhoto">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductReview_Product_ProductID">
+          <End Role="Product" Type="AdventureWorksModel.Product" Multiplicity="1" />
+          <End Role="ProductReview" Type="AdventureWorksModel.ProductReview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductReview">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductVendor_Product_ProductID">
+          <End Role="Product" Type="AdventureWorksModel.Product" Multiplicity="1" />
+          <End Role="ProductVendor" Type="AdventureWorksModel.ProductVendor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductVendor">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSubcategory_ProductCategory_ProductCategoryID">
+          <End Role="ProductCategory" Type="AdventureWorksModel.ProductCategory" Multiplicity="1" />
+          <End Role="ProductSubcategory" Type="AdventureWorksModel.ProductSubcategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductCategory">
+              <PropertyRef Name="ProductCategoryID" />
+            </Principal>
+            <Dependent Role="ProductSubcategory">
+              <PropertyRef Name="ProductCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductModelProductDescriptionCulture_ProductDescription_ProductDescriptionID">
+          <End Role="ProductDescription" Type="AdventureWorksModel.ProductDescription" Multiplicity="1" />
+          <End Role="ProductModelProductDescriptionCulture" Type="AdventureWorksModel.ProductModelProductDescriptionCulture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductDescription">
+              <PropertyRef Name="ProductDescriptionID" />
+            </Principal>
+            <Dependent Role="ProductModelProductDescriptionCulture">
+              <PropertyRef Name="ProductDescriptionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductModelIllustration_ProductModel_ProductModelID">
+          <End Role="ProductModel" Type="AdventureWorksModel.ProductModel" Multiplicity="1" />
+          <End Role="ProductModelIllustration" Type="AdventureWorksModel.ProductModelIllustration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductModel">
+              <PropertyRef Name="ProductModelID" />
+            </Principal>
+            <Dependent Role="ProductModelIllustration">
+              <PropertyRef Name="ProductModelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductModelProductDescriptionCulture_ProductModel_ProductModelID">
+          <End Role="ProductModel" Type="AdventureWorksModel.ProductModel" Multiplicity="1" />
+          <End Role="ProductModelProductDescriptionCulture" Type="AdventureWorksModel.ProductModelProductDescriptionCulture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductModel">
+              <PropertyRef Name="ProductModelID" />
+            </Principal>
+            <Dependent Role="ProductModelProductDescriptionCulture">
+              <PropertyRef Name="ProductModelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductProductPhoto_ProductPhoto_ProductPhotoID">
+          <End Role="ProductPhoto" Type="AdventureWorksModel.ProductPhoto" Multiplicity="1" />
+          <End Role="ProductProductPhoto" Type="AdventureWorksModel.ProductProductPhoto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductPhoto">
+              <PropertyRef Name="ProductPhotoID" />
+            </Principal>
+            <Dependent Role="ProductProductPhoto">
+              <PropertyRef Name="ProductPhotoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AdventureWorksModelStoreContainer" CdmEntityContainer="AdventureWorksEntities">
+          <EntitySetMapping Name="Products"><EntityTypeMapping TypeName="AdventureWorksModel.Product"><MappingFragment StoreEntitySet="Product">
+            <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="ProductNumber" ColumnName="ProductNumber" />
+            <ScalarProperty Name="MakeFlag" ColumnName="MakeFlag" />
+            <ScalarProperty Name="FinishedGoodsFlag" ColumnName="FinishedGoodsFlag" />
+            <ScalarProperty Name="Color" ColumnName="Color" />
+            <ScalarProperty Name="SafetyStockLevel" ColumnName="SafetyStockLevel" />
+            <ScalarProperty Name="ReorderPoint" ColumnName="ReorderPoint" />
+            <ScalarProperty Name="StandardCost" ColumnName="StandardCost" />
+            <ScalarProperty Name="ListPrice" ColumnName="ListPrice" />
+            <ScalarProperty Name="Size" ColumnName="Size" />
+            <ScalarProperty Name="SizeUnitMeasureCode" ColumnName="SizeUnitMeasureCode" />
+            <ScalarProperty Name="WeightUnitMeasureCode" ColumnName="WeightUnitMeasureCode" />
+            <ScalarProperty Name="Weight" ColumnName="Weight" />
+            <ScalarProperty Name="DaysToManufacture" ColumnName="DaysToManufacture" />
+            <ScalarProperty Name="ProductLine" ColumnName="ProductLine" />
+            <ScalarProperty Name="Class" ColumnName="Class" />
+            <ScalarProperty Name="Style" ColumnName="Style" />
+            <ScalarProperty Name="ProductSubcategoryID" ColumnName="ProductSubcategoryID" />
+            <ScalarProperty Name="ProductModelID" ColumnName="ProductModelID" />
+            <ScalarProperty Name="SellStartDate" ColumnName="SellStartDate" />
+            <ScalarProperty Name="SellEndDate" ColumnName="SellEndDate" />
+            <ScalarProperty Name="DiscontinuedDate" ColumnName="DiscontinuedDate" />
+            <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProductCategories"><EntityTypeMapping TypeName="AdventureWorksModel.ProductCategory"><MappingFragment StoreEntitySet="ProductCategory">
+            <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProductCostHistories"><EntityTypeMapping TypeName="AdventureWorksModel.ProductCostHistory"><MappingFragment StoreEntitySet="ProductCostHistory">
+            <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+            <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+            <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+            <ScalarProperty Name="StandardCost" ColumnName="StandardCost" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProductDescriptions"><EntityTypeMapping TypeName="AdventureWorksModel.ProductDescription"><MappingFragment StoreEntitySet="ProductDescription">
+            <ScalarProperty Name="ProductDescriptionID" ColumnName="ProductDescriptionID" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProductDocuments"><EntityTypeMapping TypeName="AdventureWorksModel.ProductDocument"><MappingFragment StoreEntitySet="ProductDocument">
+            <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+            <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProductInventories"><EntityTypeMapping TypeName="AdventureWorksModel.ProductInventory"><MappingFragment StoreEntitySet="ProductInventory">
+            <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+            <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+            <ScalarProperty Name="Shelf" ColumnName="Shelf" />
+            <ScalarProperty Name="Bin" ColumnName="Bin" />
+            <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+            <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProductListPriceHistories"><EntityTypeMapping TypeName="AdventureWorksModel.ProductListPriceHistory"><MappingFragment StoreEntitySet="ProductListPriceHistory">
+            <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+            <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+            <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+            <ScalarProperty Name="ListPrice" ColumnName="ListPrice" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProductModels"><EntityTypeMapping TypeName="AdventureWorksModel.ProductModel"><MappingFragment StoreEntitySet="ProductModel">
+            <ScalarProperty Name="ProductModelID" ColumnName="ProductModelID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="CatalogDescription" ColumnName="CatalogDescription" />
+            <ScalarProperty Name="Instructions" ColumnName="Instructions" />
+            <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProductModelIllustrations"><EntityTypeMapping TypeName="AdventureWorksModel.ProductModelIllustration"><MappingFragment StoreEntitySet="ProductModelIllustration">
+            <ScalarProperty Name="ProductModelID" ColumnName="ProductModelID" />
+            <ScalarProperty Name="IllustrationID" ColumnName="IllustrationID" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProductModelProductDescriptionCultures"><EntityTypeMapping TypeName="AdventureWorksModel.ProductModelProductDescriptionCulture"><MappingFragment StoreEntitySet="ProductModelProductDescriptionCulture">
+            <ScalarProperty Name="ProductModelID" ColumnName="ProductModelID" />
+            <ScalarProperty Name="ProductDescriptionID" ColumnName="ProductDescriptionID" />
+            <ScalarProperty Name="CultureID" ColumnName="CultureID" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProductPhotoes"><EntityTypeMapping TypeName="AdventureWorksModel.ProductPhoto"><MappingFragment StoreEntitySet="ProductPhoto">
+            <ScalarProperty Name="ProductPhotoID" ColumnName="ProductPhotoID" />
+            <ScalarProperty Name="ThumbNailPhoto" ColumnName="ThumbNailPhoto" />
+            <ScalarProperty Name="ThumbnailPhotoFileName" ColumnName="ThumbnailPhotoFileName" />
+            <ScalarProperty Name="LargePhoto" ColumnName="LargePhoto" />
+            <ScalarProperty Name="LargePhotoFileName" ColumnName="LargePhotoFileName" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProductProductPhotoes"><EntityTypeMapping TypeName="AdventureWorksModel.ProductProductPhoto"><MappingFragment StoreEntitySet="ProductProductPhoto">
+            <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+            <ScalarProperty Name="ProductPhotoID" ColumnName="ProductPhotoID" />
+            <ScalarProperty Name="Primary" ColumnName="Primary" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProductReviews"><EntityTypeMapping TypeName="AdventureWorksModel.ProductReview"><MappingFragment StoreEntitySet="ProductReview">
+            <ScalarProperty Name="ProductReviewID" ColumnName="ProductReviewID" />
+            <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+            <ScalarProperty Name="ReviewerName" ColumnName="ReviewerName" />
+            <ScalarProperty Name="ReviewDate" ColumnName="ReviewDate" />
+            <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+            <ScalarProperty Name="Rating" ColumnName="Rating" />
+            <ScalarProperty Name="Comments" ColumnName="Comments" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProductSubcategories"><EntityTypeMapping TypeName="AdventureWorksModel.ProductSubcategory"><MappingFragment StoreEntitySet="ProductSubcategory">
+            <ScalarProperty Name="ProductSubcategoryID" ColumnName="ProductSubcategoryID" />
+            <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProductVendors"><EntityTypeMapping TypeName="AdventureWorksModel.ProductVendor"><MappingFragment StoreEntitySet="ProductVendor">
+            <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+            <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+            <ScalarProperty Name="AverageLeadTime" ColumnName="AverageLeadTime" />
+            <ScalarProperty Name="StandardPrice" ColumnName="StandardPrice" />
+            <ScalarProperty Name="LastReceiptCost" ColumnName="LastReceiptCost" />
+            <ScalarProperty Name="LastReceiptDate" ColumnName="LastReceiptDate" />
+            <ScalarProperty Name="MinOrderQty" ColumnName="MinOrderQty" />
+            <ScalarProperty Name="MaxOrderQty" ColumnName="MaxOrderQty" />
+            <ScalarProperty Name="OnOrderQty" ColumnName="OnOrderQty" />
+            <ScalarProperty Name="UnitMeasureCode" ColumnName="UnitMeasureCode" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Northwind">
+        <EntityTypeShape EntityType="AdventureWorksModel.Product" Width="1.5" PointX="3" PointY="11.875" Height="7.5570279947916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksModel.ProductCategory" Width="1.5" PointX="1.5" PointY="7.625" Height="1.9802864583333344" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksModel.ProductCostHistory" Width="1.5" PointX="5.25" PointY="6.375" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksModel.ProductDescription" Width="1.5" PointX="3.75" PointY="3.625" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksModel.ProductDocument" Width="1.5" PointX="5.25" PointY="9.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksModel.ProductInventory" Width="1.5" PointX="5.25" PointY="17.875" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksModel.ProductListPriceHistory" Width="1.5" PointX="5.25" PointY="21.125" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksModel.ProductModel" Width="1.5" PointX="0.75" PointY="14.25" Height="2.7494921875000014" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksModel.ProductModelIllustration" Width="1.5" PointX="3" PointY="34" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksModel.ProductModelProductDescriptionCulture" Width="1.5" PointX="6" PointY="14.5" Height="2.1725878906250014" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksModel.ProductPhoto" Width="1.5" PointX="6" PointY="2.375" Height="2.3648893229166745" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksModel.ProductProductPhoto" Width="1.5" PointX="8.25" PointY="14.5" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksModel.ProductReview" Width="1.5" PointX="5.25" PointY="25" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksModel.ProductSubcategory" Width="1.5" PointX="0.75" PointY="10.375" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksModel.ProductVendor" Width="1.5" PointX="5.25" PointY="28.5" Height="3.3263964843750031" IsExpanded="true" />
+        <AssociationConnector Association="AdventureWorksModel.FK_Product_ProductModel_ProductModelID" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="15.624746093750002" />
+          <ConnectorPoint PointX="3" PointY="15.624746093750002" />
+        </AssociationConnector>
+        <AssociationConnector Association="AdventureWorksModel.FK_Product_ProductSubcategory_ProductSubcategoryID" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="12.307444661458334" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="12.307444661458334" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="12.307444661458334" />
+          <ConnectorPoint PointX="3" PointY="12.307444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="AdventureWorksModel.FK_ProductCostHistory_Product_ProductID" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.78125" PointY="11.875" />
+          <ConnectorPoint PointX="3.78125" PointY="7.4612939453125" />
+          <ConnectorPoint PointX="4.5963529166666666" PointY="7.4612939453124989" />
+          <ConnectorPoint PointX="4.7630195833333326" PointY="7.4612939453125" />
+          <ConnectorPoint PointX="5.25" PointY="7.4612939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="AdventureWorksModel.FK_ProductDocument_Product_ProductID" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.1718775" PointY="11.875" />
+          <ConnectorPoint PointX="4.1718775" PointY="10.143992513020834" />
+          <ConnectorPoint PointX="4.5963529166666666" PointY="10.143992513020834" />
+          <ConnectorPoint PointX="4.7630195833333326" PointY="10.143992513020834" />
+          <ConnectorPoint PointX="5.25" PointY="10.143992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="AdventureWorksModel.FK_ProductInventory_Product_ProductID" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="18.653513997395834" />
+          <ConnectorPoint PointX="5.25" PointY="18.653513997395834" />
+        </AssociationConnector>
+        <AssociationConnector Association="AdventureWorksModel.FK_ProductListPriceHistory_Product_ProductID" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="19.432027994791667" />
+          <ConnectorPoint PointX="3.75" PointY="22.211293945312498" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="22.211293945312498" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="22.211293945312498" />
+          <ConnectorPoint PointX="5.25" PointY="22.211293945312498" />
+        </AssociationConnector>
+        <AssociationConnector Association="AdventureWorksModel.FK_ProductProductPhoto_Product_ProductID" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="17.242544445312504" />
+          <ConnectorPoint PointX="9" PointY="17.242544445312504" />
+          <ConnectorPoint PointX="9" PointY="16.672587890625003" />
+        </AssociationConnector>
+        <AssociationConnector Association="AdventureWorksModel.FK_ProductReview_Product_ProductID" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.1562525" PointY="19.432027994791667" />
+          <ConnectorPoint PointX="4.1562525" PointY="26.37474609375" />
+          <ConnectorPoint PointX="5.25" PointY="26.37474609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="AdventureWorksModel.FK_ProductVendor_Product_ProductID" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.3437475" PointY="19.432027994791667" />
+          <ConnectorPoint PointX="3.3437475" PointY="30.1631982421875" />
+          <ConnectorPoint PointX="5.25" PointY="30.1631982421875" />
+        </AssociationConnector>
+        <AssociationConnector Association="AdventureWorksModel.FK_ProductSubcategory_ProductCategory_ProductCategoryID" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.875" PointY="9.6052864583333353" />
+          <ConnectorPoint PointX="1.875" PointY="10.375" />
+        </AssociationConnector>
+        <AssociationConnector Association="AdventureWorksModel.FK_ProductModelProductDescriptionCulture_ProductDescription_ProductDescriptionID" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.67968625" PointY="5.6052864583333335" />
+          <ConnectorPoint PointX="4.67968625" PointY="11.625" />
+          <ConnectorPoint PointX="4.75" PointY="11.625" />
+          <ConnectorPoint PointX="4.75" PointY="15.586293945312502" />
+          <ConnectorPoint PointX="6" PointY="15.586293945312502" />
+        </AssociationConnector>
+        <AssociationConnector Association="AdventureWorksModel.FK_ProductModelIllustration_ProductModel_ProductModelID" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="16.999492187500003" />
+          <ConnectorPoint PointX="1.5" PointY="34.893992513020834" />
+          <ConnectorPoint PointX="3" PointY="34.893992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="AdventureWorksModel.FK_ProductModelProductDescriptionCulture_ProductModel_ProductModelID" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="14.25" />
+          <ConnectorPoint PointX="1.5" PointY="14" />
+          <ConnectorPoint PointX="2.75" PointY="14" />
+          <ConnectorPoint PointX="2.75" PointY="11.375" />
+          <ConnectorPoint PointX="3.6979166666666665" PointY="11.375" />
+          <ConnectorPoint PointX="3.8645833333333335" PointY="11.375" />
+          <ConnectorPoint PointX="4.0885441666666669" PointY="11.375" />
+          <ConnectorPoint PointX="4.2552108333333329" PointY="11.375" />
+          <ConnectorPoint PointX="4.5963529166666666" PointY="11.375" />
+          <ConnectorPoint PointX="4.7630195833333326" PointY="11.375" />
+          <ConnectorPoint PointX="5.625" PointY="11.375" />
+          <ConnectorPoint PointX="5.625" PointY="15.011894972656251" />
+          <ConnectorPoint PointX="6" PointY="15.011894972656251" />
+        </AssociationConnector>
+        <AssociationConnector Association="AdventureWorksModel.FK_ProductProductPhoto_ProductPhoto_ProductPhotoID" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="3.5574446614583373" />
+          <ConnectorPoint PointX="9" PointY="3.5574446614583373" />
+          <ConnectorPoint PointX="9" PointY="14.5" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
