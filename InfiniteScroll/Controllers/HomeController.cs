@@ -37,12 +37,10 @@ namespace InfiniteScroll.Controllers
         {
             var skipRecords = page * recordsPerPage;
 
-            var listOfProducts = _data.Products.Where(x => x.ProductLine != null); 
-
-            return listOfProducts.
-                OrderBy(x=>x.Name).
-                Skip(skipRecords).
-                Take(recordsPerPage).ToList();
+            return _data.Products.Where(x => x.ProductLine != null)
+                .OrderBy(x=>x.Name)
+                .Skip(skipRecords)
+                .Take(recordsPerPage).ToList();
         }
     }
 }
